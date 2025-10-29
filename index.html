@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Jay Dholu - My Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="images/portfolio-favicon.png">
+    <meta name="author" content="Jay Dholu">
+    <meta name="description" content="Jay Dholu — A developer portfolio showcasing skills, projects, and achievements.">
+    <title>Jay Dholu - Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" type="image/x-icon" href="images/portfolio-favicon.png">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -18,6 +19,12 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <h2 style="color: var(--indigo-600)">Loading...</h2>
+    </div>
+
     <div id="vanta-bg"></div>
 
     <nav>
@@ -70,7 +77,7 @@
     <header id="home" class="hero-section">
         <div class="container text-center" data-aos="fade-up">
             <h1>Hi, I'm <span class="text-highlight">Jay Dholu</span></h1>
-            <p>Creative Developer & Designer crafting digital experiences that matter</p>
+            <p>Blending creativity with code to build scalable, intelligent, and seamless digital experiences.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View Work</a>
                 <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -92,20 +99,23 @@
                     <div class="about-text" data-aos="fade-left">
                         <h3>Who am I?</h3>
                         <p>
-                            I'm a passionate developer and designer with expertise in creating beautiful, functional
-                            digital
-                            experiences. With a background in both design and development, I bridge the gap between
-                            aesthetics and functionality.
+                            I’m a developer driven by curiosity and creativity, passionate about building digital
+                            experiences that feel as good as they look.
+                            With a background in both design and development, I bridge the gap between logic and
+                            aesthetics — turning ideas into smooth, functional, and visually engaging products.
+
                         </p>
                         <p>
+                            My work blends clean code with thoughtful design to craft solutions that are intuitive,
+                            scalable, and genuinely useful.
+                            My focus is on writing clean maintainable code, building performant systems, and creating experiences that leave a lasting impression.
                             My approach combines technical expertise with creative problem-solving to deliver solutions
-                            that
-                            are not only visually appealing but also highly usable and accessible.
+                            that are not only visually appealing but also highly usable and accessible.
                         </p>
                         <div class="about-info">
                             <div><i data-feather="map-pin"></i> Based in India</div>
-                            <div><i data-feather="briefcase"></i> 5+ Years Experience</div>
-                            <div><i data-feather="award"></i> 50+ Projects</div>
+                            <!-- <div><i data-feather="briefcase"></i> 5+ Years Experience</div> -->
+                            <!-- <div><i data-feather="award"></i> 50+ Projects</div> -->
                         </div>
                     </div>
                 </div>
@@ -118,27 +128,9 @@
                     <h2>My Skills</h2>
                     <div class="title-underline"></div>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <div class="skill-icon"><i data-feather="code"></i></div>
-                        <h3>Web Development</h3>
-                        <p>HTML, CSS, JavaScript, React, Vue, Node.js</p>
-                    </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-icon"><i data-feather="layout"></i></div>
-                        <h3>UI/UX Design</h3>
-                        <p>Figma, Adobe XD, User Research, Prototyping</p>
-                    </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="skill-icon"><i data-feather="smartphone"></i></div>
-                        <h3>Mobile Development</h3>
-                        <p>React Native, Flutter, iOS & Android</p>
-                    </div>
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="skill-icon"><i data-feather="database"></i></div>
-                        <h3>Backend</h3>
-                        <p>Node.js, Python, MongoDB, PostgreSQL</p>
-                    </div>
+                <div class="skills-grid" id="skills-container"></div>
+                <div class="text-center" style="margin-top:2rem;">
+                    <a href="skills.html" class="btn btn-primary">View All Skills →</a>
                 </div>
             </div>
         </section>
@@ -149,37 +141,9 @@
                     <h2>Featured Projects</h2>
                     <div class="title-underline"></div>
                 </div>
-                <div class="projects-grid">
-                    <div class="project-card" data-aos="fade-up">
-                        <img src="http://static.photos/technology/640x360/1" alt="Project 1">
-                        <div class="project-info">
-                            <h3>E-commerce Platform</h3>
-                            <p>A full-featured online store with payment integration and admin dashboard.</p>
-                            <div class="project-tags">
-                                <span>React</span><span>Node.js</span><span>MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="http://static.photos/technology/640x360/2" alt="Project 2">
-                        <div class="project-info">
-                            <h3>Health & Fitness App</h3>
-                            <p>Mobile application for tracking workouts, nutrition, and health metrics.</p>
-                            <div class="project-tags">
-                                <span>Flutter</span><span>Firebase</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="http://static.photos/technology/640x360/3" alt="Project 3">
-                        <div class="project-info">
-                            <h3>Corporate Website</h3>
-                            <p>Modern, responsive website for a financial services company.</p>
-                            <div class="project-tags">
-                                <span>Next.js</span><span>Tailwind CSS</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="projects-grid" id="projects-container"></div>
+                <div class="text-center" style="margin-top:2rem;">
+                    <a href="projects.html" class="btn btn-primary">View All Projects →</a>
                 </div>
             </div>
         </section>
@@ -206,10 +170,6 @@
                         <i data-feather="mail" class="social-icon"></i>
                         <span>jaydholu074@gmail.com</span>
                     </a>
-                    <a href="tel:+919545144811" class="contact-item">
-                        <i data-feather="phone" class="social-icon"></i>
-                        <span>+91 9545144811</span>
-                    </a>
                     <a href="https://www.linkedin.com/in/jay-dholu-cte-gecbvn-ce-433a582b1/" target="_blank"
                         class="contact-item">
                         <i data-feather="linkedin" class="social-icon"></i>
@@ -218,6 +178,10 @@
                     <a href="https://github.com/jaydholu" target="_blank" class="contact-item">
                         <i data-feather="github" class="social-icon"></i>
                         <span>github.com/jaydholu</span>
+                    </a>
+                    <a href="tel:+919545144811" class="contact-item">
+                        <i data-feather="phone" class="social-icon"></i>
+                        <span>+91 9545144811</span>
                     </a>
                 </div>
 
@@ -245,29 +209,42 @@
                     <div>
                         <h4>Social</h4>
                         <ul>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/jay-dholu-cte-gecbvn-ce-433a582b1/"
+                                    target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <span class="social-icon-text">LinkedIn</span>
+                                </a></li>
+                            <li><a href="https://github.com/jaydholu" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span class="social-icon-text">GitHub</span>
+                                </a></li>
+                            <!-- <li><a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                                <span class="social-icon-text">Twitter</span>
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span class="social-icon-text">Instagram</span>
+                            </a></li> -->
                         </ul>
                     </div>
-                    <div>
+                    <!-- <div>
                         <h4>Legal</h4>
                         <ul>
                             <li><a href="#">Privacy</a></li>
                             <li><a href="#">Terms</a></li>
                             <li><a href="#">Cookies</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Jay Dholu. All rights reserved.</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-                    <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
                     <a href="#" aria-label="GitHub"><i data-feather="github"></i></a>
+                    <!-- <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a> -->
                 </div>
             </div>
         </div>
