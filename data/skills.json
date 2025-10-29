@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Python",
+    "icon": "terminal",
+    "description": "Writing efficient, readable scripts for automation, data analysis, and backend systems.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "NumPy",
+    "icon": "grid",
+    "description": "Performing numerical computations and array manipulations for scientific computing.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Pandas",
+    "icon": "database",
+    "description": "Manipulating and analyzing complex datasets for insights and reporting.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Scikit-Learn",
+    "icon": "activity",
+    "description": "Building and evaluating machine learning models for predictive analytics.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Machine Learning",
+    "icon": "activity",
+    "description": "Designing and training predictive models for intelligent, data-driven applications.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Deep Learning",
+    "icon": "activity",
+    "description": "Designing and training deep neural networks for complex pattern recognition tasks.",
+    "level": "Beginner"
+  },
+  {
+    "name": "Flask",
+    "icon": "server",
+    "description": "Developing lightweight APIs and server-side logic for full-stack applications.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "PyMongo (MongoDB)",
+    "icon": "database",
+    "description": "Designing flexible, scalable NoSQL databases using Python's PyMongo library for modern web applications.",
+    "level": "Beginner"
+  },
+  {
+    "name": "Tkinter",
+    "icon": "layout",
+    "description": "Creating desktop GUI applications with intuitive interfaces using Tkinter.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "BeautifulSoup",
+    "icon": "search",
+    "description": "Scraping and parsing HTML data from web pages for data extraction and analysis.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "HTML5",
+    "icon": "code",
+    "description": "Crafting semantic, accessible, and SEO-friendly web pages using modern HTML standards.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "CSS3",
+    "icon": "layers",
+    "description": "Designing responsive layouts with Flexbox, Grid, and animations that feel natural.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "JavaScript (ES6+)",
+    "icon": "cpu",
+    "description": "Building interactive, dynamic web experiences with clean, modular code.",
+    "level": "Beginner"
+  },
+  {
+    "name": "React.js",
+    "icon": "aperture",
+    "description": "Building scalable UI components and SPAs with hooks and modern React patterns.",
+    "level": "Beginner"
+  },
+  {
+    "name": "Git & GitHub",
+    "icon": "github",
+    "description": "Managing version control, collaboration, and CI/CD workflows with confidence.",
+    "level": "Beginner"
+  },
+  {
+    "name": "C/C++ Programming",
+    "icon": "cpu",
+    "description": "Designing and implementing efficient algorithms and data structures in C/C++. Completed my DSA in C++.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Java Programming",
+    "icon": "coffee",
+    "description": "Simple projects and console applications using Java.",
+    "level": "Beginner"
+  }
+]
