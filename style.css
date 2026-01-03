@@ -652,6 +652,14 @@ nav {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 640px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 768px) {
@@ -674,6 +682,13 @@ nav {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--white);
+}
+
+.dark .project-card {
+    background-color: var(--gray-800);
 }
 
 .project-card:hover {
@@ -685,15 +700,17 @@ nav {
     width: 100%;
     height: 18rem;
     object-fit: cover;
+    object-position: top;
+    display: block;
 }
 
 .project-info {
-    padding: 1.25rem;
-    background-color: var(--white);
+    padding: 1.5rem;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    height: 14rem;
+    min-height: 16rem;
 }
 
 .dark .project-info {
@@ -703,6 +720,7 @@ nav {
 .project-info h3 {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
+    color: var(--white);
 }
 
 .dark .project-info h3 {
@@ -801,6 +819,8 @@ nav {
 }
 
 .contact-form button {
+    font-size: 18px;
+    font-weight: 400;
     width: 100%;
     border: none;
     cursor: pointer;
@@ -857,6 +877,105 @@ nav {
 
 .dark .contact-item i {
     color: var(--indigo-500);
+}
+
+/* ----- Web3forms contact form ----- */
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    animation: slideDown 0.3s ease-out;
+}
+
+.form-message.hidden {
+    display: none;
+}
+
+.form-message-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.dark .form-message-success {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.form-message-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.dark .form-message-error {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Button Animation */
+.contact-form button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-form button[type="submit"] .btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-form button[type="submit"]:disabled {
+    cursor: not-allowed;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hidden class for honeypot */
+.hidden {
+    display: none !important;
+}
+
+/* Improve form input focus states */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.dark .contact-form input:focus,
+.dark .contact-form textarea:focus {
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+/* Button hover effect */
+.contact-form button[type="submit"]:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Mobile responsiveness for form message */
+@media (max-width: 767px) {
+    .form-message {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* --- Footer --- */
@@ -1025,10 +1144,6 @@ html.light .spinner {
 }
 
 /* Mobile UI Improvements */
-/* ============================================
-   CRITICAL MOBILE FIXES - Add to end of style.css
-   ============================================ */
-
 /* Fix body and html to prevent horizontal overflow */
 html,
 body {

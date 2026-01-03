@@ -1,5 +1,17 @@
 [
   {
+    "name": "Machine Learning",
+    "icon": "activity",
+    "description": "Designing and training predictive models for intelligent, data-driven applications.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Deep Learning",
+    "icon": "activity",
+    "description": "Designing and training deep neural networks (ANN) for complex pattern recognition tasks.",
+    "level": "Beginner"
+  },
+  {
     "name": "Python",
     "icon": "terminal",
     "description": "Writing efficient, readable scripts for automation, data analysis, and backend systems.",
@@ -24,21 +36,33 @@
     "level": "Intermediate"
   },
   {
-    "name": "Machine Learning",
+    "name": "SciPy",
     "icon": "activity",
-    "description": "Designing and training predictive models for intelligent, data-driven applications.",
+    "description": "Solving scientific and engineering problems using advanced mathematical functions.",
     "level": "Intermediate"
-  },
-  {
-    "name": "Deep Learning",
-    "icon": "activity",
-    "description": "Designing and training deep neural networks for complex pattern recognition tasks.",
-    "level": "Beginner"
   },
   {
     "name": "Flask",
     "icon": "server",
     "description": "Developing lightweight APIs and server-side logic for full-stack applications.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "Pydantic",
+    "icon": "database",
+    "description": "Validating and parsing data with Pydantic for robust and type-safe APIs.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "FastAPI",
+    "icon": "server",
+    "description": "Building scalable and efficient APIs with FastAPI for modern web applications.",
+    "level": "Intermediate"
+  },
+  {
+    "name": "BeautifulSoup",
+    "icon": "search",
+    "description": "Scraping and parsing HTML data from web pages for data extraction and analysis.",
     "level": "Intermediate"
   },
   {
@@ -51,12 +75,6 @@
     "name": "Tkinter",
     "icon": "layout",
     "description": "Creating desktop GUI applications with intuitive interfaces using Tkinter.",
-    "level": "Intermediate"
-  },
-  {
-    "name": "BeautifulSoup",
-    "icon": "search",
-    "description": "Scraping and parsing HTML data from web pages for data extraction and analysis.",
     "level": "Intermediate"
   },
   {

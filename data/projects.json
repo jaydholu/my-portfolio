@@ -2,7 +2,7 @@
   {
     "name": "Flight Price Predictor",
     "description": "Predicts flight fares using regression models and serves results via a web interface deployed on Render.",
-    "image": "images/projects/flight-price.png",
+    "image": "images/projects/flight-price-predictor.png",
     "tags": ["ML", "Python", "Flask", "Pandas"],
     "demolink": "https://flight-price-predictor-iu39.onrender.com/",
     "githubrepo": "https://github.com/jaydholu/flight-price-predictor"
@@ -10,7 +10,7 @@
   {
     "name": "Star Feature Predictor",
     "description": "Predicts the feature of a star based on its other characteristics using various machine learning algorithms.",
-    "image": "images/projects/star-feature.png",
+    "image": "images/projects/star-feature-predictor.png",
     "tags": ["ML", "Python", "Flask", "Pandas"],
     "demolink": null,
     "githubrepo": "https://github.com/jaydholu/star-feature-predictor"
@@ -18,19 +18,11 @@
   {
     "name": "My Reading Journey",
     "description": "A personal library web app that keeps track of books read, currently reading and to-read lists. Users can add, update, and delete book entries.",
-    "image": "images/projects/reading-journey.png",
+    "image": "images/projects/my-reading-journey.png",
     "tags": ["Flask", "MongoDB", "CSS", "JavaScript"],
     "demolink": null,
     "githubrepo": "https://github.com/jaydholu/my-reading-journey"
 
-  },
-  {
-    "name": "Download Tube",
-    "description": "A YouTube video and audio downloader built with Flask and yt-dlp. Supports real-time progress tracking and multi-format downloads.",
-    "image": "images/projects/download-tube.png",
-    "tags": ["Flask", "SocketIO", "yt-dlp", "JavaScript"],
-    "demolink": null,
-    "githubrepo": "https://github.com/jaydholu/download-tube"
   },
   {
     "name": "AgroCare AI",
@@ -39,5 +31,13 @@
     "tags": ["Flask", "ML", "DL", "API"],
     "demolink": null,
     "githubrepo": "https://github.com/code-cosmos-tech/agrocare-ai"
+  },
+  {
+    "name": "Student Performance Evaluation System",
+    "description": "A system that evaluates student performance based on their academic data using machine learning algorithms.",
+    "image": "images/projects/student-performance-evaluation-system.png",
+    "tags": ["ML", "Python", "FastAPI", "sklearn"],
+    "demolink": "https://student-performance-ml-service.onrender.com/docs",
+    "githubrepo": "https://github.com/jaydholu/student-performance-evaluation-system"
   }
 ]

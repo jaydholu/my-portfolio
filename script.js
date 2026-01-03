@@ -195,3 +195,108 @@ document.addEventListener('DOMContentLoaded', () => {
   // Final call to render all static icons on the page
   feather.replace();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          // Get form elements
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const btnText = submitBtn.querySelector('.btn-text');
+          const formMessage = document.getElementById('form-message');
+          
+          // Get form data
+          const formData = new FormData(contactForm);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+          
+          // Show loading state
+          const originalText = btnText.textContent;
+          btnText.innerHTML = '<i data-feather="loader" style="width: 16px; height: 16px; animation: spin 1s linear infinite;"></i> Sending...';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
+          submitBtn.style.cursor = 'not-allowed';
+          formMessage.classList.add('hidden');
+          feather.replace();
+          
+          try {
+              // Send form data to Web3Forms
+              const response = await fetch('https://api.web3forms.com/submit', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                  },
+                  body: json
+              });
+              
+              const result = await response.json();
+              
+              if (response.status === 200 && result.success) {
+                  // Success!
+                  btnText.innerHTML = '<i data-feather="check-circle" style="width: 16px; height: 16px;"></i> Message Sent!';
+                  submitBtn.style.backgroundColor = '#10b981';
+                  
+                  // Show success message
+                  formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                  formMessage.className = 'form-message form-message-success';
+                  
+                  // Reset form
+                  contactForm.reset();
+                  
+                  // Reset button after 5 seconds
+                  setTimeout(() => {
+                      btnText.textContent = originalText;
+                      submitBtn.style.backgroundColor = '';
+                      submitBtn.disabled = false;
+                      submitBtn.style.opacity = '1';
+                      submitBtn.style.cursor = 'pointer';
+                      formMessage.classList.add('hidden');
+                  }, 5000);
+                  
+              } else {
+                  throw new Error(result.message || 'Something went wrong');
+              }
+              
+          } catch (error) {
+              console.error('Error:', error);
+              
+              // Show error state
+              btnText.innerHTML = '<i data-feather="x-circle" style="width: 16px; height: 16px;"></i> Failed to Send';
+              submitBtn.style.backgroundColor = '#ef4444';
+              
+              // Show error message
+              formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
+              formMessage.className = 'form-message form-message-error';
+              
+              // Reset button after 5 seconds
+              setTimeout(() => {
+                  btnText.textContent = originalText;
+                  submitBtn.style.backgroundColor = '';
+                  submitBtn.disabled = false;
+                  submitBtn.style.opacity = '1';
+                  submitBtn.style.cursor = 'pointer';
+              }, 5000);
+          }
+          
+          // Replace feather icons
+          feather.replace();
+      });
+  }
+});
+
+// Add spinning animation for loader
+if (!document.getElementById('spinner-styles')) {
+  const style = document.createElement('style');
+  style.id = 'spinner-styles';
+  style.textContent = `
+      @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+      }
+  `;
+  document.head.appendChild(style);
+}
