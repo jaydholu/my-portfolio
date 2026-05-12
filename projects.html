@@ -31,7 +31,7 @@
         <div class="container nav-container">
             <a href="index.html" class="nav-brand">Jay Dholu</a>
             <div class="nav-links">
-                <a href="index.html#home" class="nav-menu-item">
+                <a href="index.html" class="nav-menu-item">
                     <i data-feather="home" class="nav-icon"></i>
                     Home
                 </a>
@@ -46,6 +46,10 @@
                 <a href="projects.html" class="nav-menu-item active">
                     <i data-feather="briefcase" class="nav-icon"></i>
                     Projects
+                </a>
+                <a href="certificates.html" class="nav-menu-item">
+                    <i data-feather="award" class="nav-icon"></i>
+                    Certificates
                 </a>
                 <a href="index.html#contact" class="nav-menu-item">
                     <i data-feather="mail" class="nav-icon"></i>
@@ -71,6 +75,7 @@
         <a href="index.html#about">About</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
         <a href="index.html#contact">Contact</a>
     </div>
 
@@ -181,8 +186,8 @@
                                     ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
                                 </div>
                                 <div class="project-links">
-                                    ${project.demolink ? `<a href="${project.demolink}" target="_blank" class="btn btn-primary">Live Demo</a>` : ''}
-                                    <a href="${project.githubrepo}" target="_blank" class="btn ${project.demolink ? 'btn-secondary' : 'btn-primary'}">GitHub</a>
+                                    <a href="${project.githubrepo}" target="_blank" class="btn btn-primary">GitHub</a>
+                                    ${project.demolink ? `<a href="${project.demolink}" target="_blank" class="btn btn-secondary">Live Demo</a>` : ''}
                                 </div>
                             </div>
                         </div>
@@ -209,7 +214,7 @@
                 feather.replace();
             } catch (err) {
                 console.error('Error loading projects:', err);
-                document.getElementById('all-projects-container').innerHTML = 
+                document.getElementById('all-projects-container').innerHTML =
                     '<p style="grid-column: 1/-1; text-align: center; color: red;">Error loading projects. Please check console.</p>';
             }
         });
