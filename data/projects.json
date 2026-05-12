@@ -20,7 +20,7 @@
     "description": "A personal library web app that keeps track of books read, currently reading and to-read lists. Users can add, update, and delete book entries.",
     "image": "images/projects/my-reading-journey.png",
     "tags": ["Flask", "MongoDB", "CSS", "JavaScript"],
-    "demolink": null,
+    "demolink": "https://myreadingjourney.onrender.com/",
     "githubrepo": "https://github.com/jaydholu/my-reading-journey"
 
   },
@@ -34,7 +34,7 @@
   },
   {
     "name": "Student Performance Evaluation System",
-    "description": "A system that evaluates student performance based on their academic data using machine learning algorithms.",
+    "description": "A system that evaluates student performance based on their academic data using machine learning algorithms. (ML service deployed on Render, you can view it by swagger UI)",
     "image": "images/projects/student-performance-evaluation-system.png",
     "tags": ["ML", "Python", "FastAPI", "sklearn"],
     "demolink": "https://student-performance-ml-service.onrender.com/docs",
