@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const skillsRes = await fetch("data/skills.json");
       const skills = await skillsRes.json();
       console.log('Skills loaded:', skills);
-      
+
       // Display top 4 skills on index page
       skillsContainer.innerHTML = skills.slice(0, 4).map(skill => `
         <div class="skill-card" data-aos="fade-up">
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const projectsRes = await fetch("data/projects.json");
       const projects = await projectsRes.json();
       console.log('Projects loaded:', projects);
-      
+
       // Display top 3 projects on index page
       projectsContainer.innerHTML = projects.slice(0, 3).map(project => `
         <div class="project-card" data-aos="fade-up">
@@ -114,6 +114,44 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `).join("");
+
+      // Load Certificates (top 3 shown on index)
+      const certsRes = await fetch("data/certificates.json");
+      const certificates = await certsRes.json();
+      const certsContainer = document.getElementById("certificates-container");
+
+      if (certsContainer) {
+        certsContainer.innerHTML = certificates.slice(0, 3).map(cert => `
+          <div class="certificate-card" data-aos="fade-up">
+            <div class="certificate-image-wrap">
+              <img src="${cert.image}" alt="${cert.name}" onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(cert.name)}'">
+            </div>
+            <div class="certificate-info">
+              <div class="certificate-header">
+                <span class="certificate-issuer">
+                  <i data-feather="award"></i>
+                  ${cert.issuer}
+                </span>
+                <span class="certificate-date">
+                  <i data-feather="calendar"></i>
+                  ${cert.date}
+                </span>
+              </div>
+              <h3>${cert.name}</h3>
+              ${cert.score ? `<div class="certificate-score"><i data-feather="star"></i> Score: ${cert.score}</div>` : ''}
+              <div class="certificate-tags">
+                ${cert.tags.map(tag => `<span>${tag}</span>`).join('')}
+              </div>
+              ${cert.verifylink ? `
+                <div class="certificate-links">
+                  <a href="${cert.verifylink}" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="external-link"></i> View Certificate
+                  </a>
+                </div>` : ''}
+            </div>
+          </div>
+        `).join('');
+      }
 
       // Replace feather icons after content is loaded
       console.log('Replacing feather icons...');
@@ -134,10 +172,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load data for index page
   loadData();
-  
+
   // Initialize AOS
   AOS.init({ duration: 800, once: true });
-  
+
   // Initialize feather icons
   feather.replace();
 
@@ -196,95 +234,95 @@ document.addEventListener('DOMContentLoaded', () => {
   feather.replace();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contactForm');
-  
+
   if (contactForm) {
-      contactForm.addEventListener('submit', async function(e) {
-          e.preventDefault();
-          
-          // Get form elements
-          const submitBtn = this.querySelector('button[type="submit"]');
-          const btnText = submitBtn.querySelector('.btn-text');
-          const formMessage = document.getElementById('form-message');
-          
-          // Get form data
-          const formData = new FormData(contactForm);
-          const object = Object.fromEntries(formData);
-          const json = JSON.stringify(object);
-          
-          // Show loading state
-          const originalText = btnText.textContent;
-          btnText.innerHTML = '<i data-feather="loader" style="width: 16px; height: 16px; animation: spin 1s linear infinite;"></i> Sending...';
-          submitBtn.disabled = true;
-          submitBtn.style.opacity = '0.7';
-          submitBtn.style.cursor = 'not-allowed';
-          formMessage.classList.add('hidden');
-          feather.replace();
-          
-          try {
-              // Send form data to Web3Forms
-              const response = await fetch('https://api.web3forms.com/submit', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json',
-                      'Accept': 'application/json'
-                  },
-                  body: json
-              });
-              
-              const result = await response.json();
-              
-              if (response.status === 200 && result.success) {
-                  // Success!
-                  btnText.innerHTML = '<i data-feather="check-circle" style="width: 16px; height: 16px;"></i> Message Sent!';
-                  submitBtn.style.backgroundColor = '#10b981';
-                  
-                  // Show success message
-                  formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
-                  formMessage.className = 'form-message form-message-success';
-                  
-                  // Reset form
-                  contactForm.reset();
-                  
-                  // Reset button after 5 seconds
-                  setTimeout(() => {
-                      btnText.textContent = originalText;
-                      submitBtn.style.backgroundColor = '';
-                      submitBtn.disabled = false;
-                      submitBtn.style.opacity = '1';
-                      submitBtn.style.cursor = 'pointer';
-                      formMessage.classList.add('hidden');
-                  }, 5000);
-                  
-              } else {
-                  throw new Error(result.message || 'Something went wrong');
-              }
-              
-          } catch (error) {
-              console.error('Error:', error);
-              
-              // Show error state
-              btnText.innerHTML = '<i data-feather="x-circle" style="width: 16px; height: 16px;"></i> Failed to Send';
-              submitBtn.style.backgroundColor = '#ef4444';
-              
-              // Show error message
-              formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
-              formMessage.className = 'form-message form-message-error';
-              
-              // Reset button after 5 seconds
-              setTimeout(() => {
-                  btnText.textContent = originalText;
-                  submitBtn.style.backgroundColor = '';
-                  submitBtn.disabled = false;
-                  submitBtn.style.opacity = '1';
-                  submitBtn.style.cursor = 'pointer';
-              }, 5000);
-          }
-          
-          // Replace feather icons
-          feather.replace();
-      });
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Get form elements
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const formMessage = document.getElementById('form-message');
+
+      // Get form data
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      // Show loading state
+      const originalText = btnText.textContent;
+      btnText.innerHTML = '<i data-feather="loader" style="width: 16px; height: 16px; animation: spin 1s linear infinite;"></i> Sending...';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      submitBtn.style.cursor = 'not-allowed';
+      formMessage.classList.add('hidden');
+      feather.replace();
+
+      try {
+        // Send form data to Web3Forms
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+
+        const result = await response.json();
+
+        if (response.status === 200 && result.success) {
+          // Success!
+          btnText.innerHTML = '<i data-feather="check-circle" style="width: 16px; height: 16px;"></i> Message Sent!';
+          submitBtn.style.backgroundColor = '#10b981';
+
+          // Show success message
+          formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+          formMessage.className = 'form-message form-message-success';
+
+          // Reset form
+          contactForm.reset();
+
+          // Reset button after 5 seconds
+          setTimeout(() => {
+            btnText.textContent = originalText;
+            submitBtn.style.backgroundColor = '';
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            submitBtn.style.cursor = 'pointer';
+            formMessage.classList.add('hidden');
+          }, 5000);
+
+        } else {
+          throw new Error(result.message || 'Something went wrong');
+        }
+
+      } catch (error) {
+        console.error('Error:', error);
+
+        // Show error state
+        btnText.innerHTML = '<i data-feather="x-circle" style="width: 16px; height: 16px;"></i> Failed to Send';
+        submitBtn.style.backgroundColor = '#ef4444';
+
+        // Show error message
+        formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
+        formMessage.className = 'form-message form-message-error';
+
+        // Reset button after 5 seconds
+        setTimeout(() => {
+          btnText.textContent = originalText;
+          submitBtn.style.backgroundColor = '';
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.style.cursor = 'pointer';
+        }, 5000);
+      }
+
+      // Replace feather icons
+      feather.replace();
+    });
   }
 });
 
