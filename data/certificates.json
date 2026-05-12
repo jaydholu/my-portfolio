@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Python for Data Science",
+    "issuer": "NPTEL / IIT Madras",
+    "date": "Jul-Aug 2025",
+    "image": "images/certificates/nptel-python-data-science.png",
+    "tags": ["Python", "Data Science", "NPTEL"],
+    "score": "90%",
+    "verifylink": "https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs104/Course/NPTEL25CS104S33240000609133639.pdf"
+  },
+  {
+    "name": "Python for OOP: The A-to-Z OOP Python Programming Course",
+    "issuer": "Udemy",
+    "date": "Oct 11, 2024",
+    "image": "images/certificates/udemy-python-oop.png",
+    "tags": ["Python", "OOP"],
+    "score": null,
+    "verifylink": "https://ude.my/UC-adcb7fec-a684-4534-8ee5-e2b6ec089625"
+  },
+  {
+    "name": "Intermediate Python Immersive Training",
+    "issuer": "Udemy",
+    "date": "Oct 15, 2024",
+    "image": "images/certificates/udemy-intermediate-python.png",
+    "tags": ["Python", "Intermediate"],
+    "score": null,
+    "verifylink": "https://ude.my/UC-38870af2-d75a-4614-b3cf-2736a89bf2c1"
+  },
+  {
+    "name": "Python for Data Science in Hindi",
+    "issuer": "Udemy",
+    "date": "Sept 14, 2024",
+    "image": "images/certificates/udemy-python-data-science-hindi.png",
+    "tags": ["Python", "Data Science"],
+    "score": null,
+    "verifylink": "https://ude.my/UC-cda1bbb1-410d-4783-bc2b-2621e408394f"
+  },
+  {
+    "name": "Windows Command Mastery for Ethical Hackers",
+    "issuer": "Udemy",
+    "date": "Aug 23, 2024",
+    "image": "images/certificates/udemy-windows-command.png",
+    "tags": ["Windows", "Command Line", "Ethical Hacking"],
+    "score": null,
+    "verifylink": "https://ude.my/UC-8df07a74-5e6e-4eec-95ae-de48521d1f81"
+  },
+  {
+    "name": "Python",
+    "issuer": "Mimo",
+    "date": "Mar 7, 2025",
+    "image": "images/certificates/mimo-python.png",
+    "tags": ["Python", "Programming"],
+    "score": null,
+    "verifylink": null
+  },
+  {
+    "name": "Operators Programming in C",
+    "issuer": "MindLuster",
+    "date": "Jan 28, 2024",
+    "image": "images/certificates/mindluster-c-operators.png",
+    "tags": ["C Programming", "Operators"],
+    "score": null,
+    "verifylink": null
+  }
+]
