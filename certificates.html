@@ -160,8 +160,18 @@
 
                 container.innerHTML = certificates.map(cert => `
                     <div class="certificate-card" data-aos="fade-up">
-                        <div class="certificate-image-wrap">
-                            <img src="${cert.image}" alt="${cert.name}" onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(cert.name)}'">
+                        <div class="card-image-clickable certificate-image-wrap"
+                            onclick="openImageModal('${cert.image}', '${cert.name}')"
+                            role="button" tabindex="0"
+                            onkeydown="if(event.key==='Enter'||event.key===' ')openImageModal('${cert.image}','${cert.name}')">
+                            <img src="${cert.image}" alt="${cert.name}"
+                                onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(cert.name)}'">
+                            <div class="img-overlay" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="certificate-info">
                             <div class="certificate-header">
@@ -178,9 +188,9 @@
                             ${cert.score ? `<div class="certificate-score"><i data-feather="star"></i> Score: ${cert.score}</div>` : ''}
                             ${cert.verifylink ? `
                             <div class="certificate-links">
-                            <a href="${cert.verifylink}" target="_blank" rel="noopener" class="btn btn-primary">
-                                <i data-feather="external-link"></i> View Certificate
-                            </a>
+                                <a href="${cert.verifylink}" target="_blank" rel="noopener" class="btn btn-primary">
+                                    <i data-feather="external-link"></i> View Certificate
+                                </a>
                             </div>` : ''}
                             <div class="certificate-tags">
                                 ${cert.tags.map(tag => `<span>${tag}</span>`).join('')}

@@ -338,3 +338,52 @@ if (!document.getElementById('spinner-styles')) {
   `;
   document.head.appendChild(style);
 }
+
+// ============================================
+// IMAGE LIGHTBOX MODAL
+// Add this block to the very bottom of script.js
+// ============================================
+
+(function () {
+    // Inject modal HTML into the page once
+    const modalHTML = `
+    <div id="img-modal" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close preview">&#x2715;</button>
+        <img id="modal-img" src="" alt="">
+        <p class="modal-caption" id="modal-caption"></p>
+      </div>
+    </div>`;
+
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    const modal    = document.getElementById('img-modal');
+    const modalImg = document.getElementById('modal-img');
+    const caption  = document.getElementById('modal-caption');
+    const closeBtn = modal.querySelector('.modal-close');
+
+    // Global open function — called from project/certificate card templates
+    window.openImageModal = function (src, alt) {
+        modalImg.src = src;
+        modalImg.alt = alt || '';
+        caption.textContent = alt || '';
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+    };
+
+    function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        modalImg.src = '';
+    }
+
+    // Close via button, backdrop click, or Escape key
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+})();
