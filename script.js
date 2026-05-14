@@ -100,7 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
       // Display top 3 projects on index page
       projectsContainer.innerHTML = projects.slice(0, 3).map(project => `
         <div class="project-card" data-aos="fade-up">
-          <img src="${project.image}" alt="${project.name}" onerror="this.src='https://via.placeholder.com/400x300?text=${encodeURIComponent(project.name)}'">
+          <div class="card-image-clickable"
+            onclick="openImageModal('${project.image}', '${project.name}')"
+            role="button" tabindex="0"
+            onkeydown="if(event.key==='Enter'||event.key===' ')openImageModal('${project.image}','${project.name}')">
+            <img src="${project.image}" alt="${project.name}"
+                onerror="this.src='https://via.placeholder.com/400x300?text=${encodeURIComponent(project.name)}'">
+            <div class="img-overlay" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M11 8v6M8 11h6"/>
+                </svg>
+            </div>
+          </div>
           <div class="project-info">
             <h3>${project.name}</h3>
             <p>${project.description}</p>
@@ -123,8 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (certsContainer) {
         certsContainer.innerHTML = certificates.slice(0, 3).map(cert => `
           <div class="certificate-card" data-aos="fade-up">
-            <div class="certificate-image-wrap">
-              <img src="${cert.image}" alt="${cert.name}" onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(cert.name)}'">
+            <div class="card-image-clickable certificate-image-wrap"
+              onclick="openImageModal('${cert.image}', '${cert.name}')"
+              role="button" tabindex="0"
+              onkeydown="if(event.key==='Enter'||event.key===' ')openImageModal('${cert.image}','${cert.name}')">
+              <img src="${cert.image}" alt="${cert.name}"
+                  onerror="this.src='https://via.placeholder.com/600x400?text=${encodeURIComponent(cert.name)}'">
+              <div class="img-overlay" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                          d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+              </div>
             </div>
             <div class="certificate-info">
               <div class="certificate-header">
