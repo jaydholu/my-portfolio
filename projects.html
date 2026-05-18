@@ -200,8 +200,8 @@
                                     ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
                                 </div>
                                 <div class="project-links">
-                                    ${project.demolink ? `<a href="${project.demolink}" target="_blank" class="btn btn-primary">Live Demo</a>` : ''}
-                                    <a href="${project.githubrepo}" target="_blank" class="btn ${project.demolink ? 'btn-secondary' : 'btn-primary'}">GitHub</a>
+                                    <a href="${project.githubrepo}" target="_blank" class="btn btn-primary">GitHub</a>
+                                    ${project.demolink ? `<a href="${project.demolink}" target="_blank" class="btn btn-secondary">Live Demo</a>` : ''}
                                 </div>
                             </div>
                         </div>
