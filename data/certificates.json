@@ -1,5 +1,14 @@
 [
   {
+    "name": "Deep Learning",
+    "issuer": "NPTEL / IIT Kharagpur",
+    "date": "Jan-Apr 2026",
+    "image": "images/certificates/nptel-deep-learning.png",
+    "tags": ["Deep Learning", "NPTEL"],
+    "score": "69%",
+    "verifylink": "https://storage.googleapis.com/2026-mar-halltickets/certificate-generation-apr26/final/regular/noc26-ee53/NOC26EE53S105210003804567199.pdf"
+  },
+  {
     "name": "Python for Data Science",
     "issuer": "NPTEL / IIT Madras",
     "date": "Jul-Aug 2025",
