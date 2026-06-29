@@ -9,7 +9,7 @@ const socials = [
   { href: 'https://github.com/jaydholu',            icon: GithubIcon,    label: 'GitHub' },
   { href: 'https://linkedin.com/in/jaydholu',       icon: LinkedinIcon,  label: 'LinkedIn' },
   { href: 'https://x.com/jay_dholu',                icon: TwitterIcon,   label: 'Twitter' },
-  { href: 'https://instagram.com/__jaydholu__',     icon: InstagramIcon, label: 'Instagram' },
+  { href: 'https://instagram.com/_jaydholu_',     icon: InstagramIcon, label: 'Instagram' },
 ]
 
 const navLinks = [
