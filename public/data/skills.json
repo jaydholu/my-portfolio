@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Machine Learning",
+    "icon": "activity",
+    "description": "Designing and training predictive models for intelligent, data-driven applications.",
+    "level": "Intermediate",
+    "category": "AI / ML / DL"
+  },
+  {
+    "name": "Deep Learning",
+    "icon": "activity",
+    "description": "Designing and training deep neural networks (ANN) for complex pattern recognition tasks.",
+    "level": "Beginner",
+    "category": "AI / ML / DL"
+  },
+  {
+    "name": "Scikit-Learn",
+    "icon": "activity",
+    "description": "Building and evaluating machine learning models for predictive analytics.",
+    "level": "Intermediate",
+    "category": "AI / ML / DL"
+  },
+  {
+    "name": "NumPy",
+    "icon": "grid",
+    "description": "Performing numerical computations and array manipulations for scientific computing.",
+    "level": "Intermediate",
+    "category": "AI / ML / DL"
+  },
+  {
+    "name": "Pandas",
+    "icon": "database",
+    "description": "Manipulating and analyzing complex datasets for insights and reporting.",
+    "level": "Intermediate",
+    "category": "AI / ML / DL"
+  },
+  {
+    "name": "SciPy",
+    "icon": "activity",
+    "description": "Solving scientific and engineering problems using advanced mathematical functions.",
+    "level": "Intermediate",
+    "category": "AI / ML / DL"
+  },
+  {
+    "name": "Flask",
+    "icon": "server",
+    "description": "Developing lightweight APIs and server-side logic for full-stack applications.",
+    "level": "Intermediate",
+    "category": "Backend & Web API"
+  },
+  {
+    "name": "FastAPI",
+    "icon": "server",
+    "description": "Building scalable and efficient APIs with FastAPI for modern web applications.",
+    "level": "Intermediate",
+    "category": "Backend & Web API"
+  },
+  {
+    "name": "Pydantic",
+    "icon": "database",
+    "description": "Validating and parsing data with Pydantic for robust and type-safe APIs.",
+    "level": "Intermediate",
+    "category": "Backend & Web API"
+  },
+  {
+    "name": "BeautifulSoup",
+    "icon": "search",
+    "description": "Scraping and parsing HTML data from web pages for data extraction and analysis.",
+    "level": "Intermediate",
+    "category": "Backend & Web API"
+  },
+  {
+    "name": "C# .NET",
+    "icon": "code",
+    "description": "Building robust backend systems and console applications using C# and the .NET ecosystem.",
+    "level": "Beginner",
+    "category": "Backend & Web API"
+  },
+  {
+    "name": "HTML5",
+    "icon": "code",
+    "description": "Crafting semantic, accessible, and SEO-friendly web pages using modern HTML standards.",
+    "level": "Intermediate",
+    "category": "Frontend"
+  },
+  {
+    "name": "CSS3",
+    "icon": "layers",
+    "description": "Designing responsive layouts with Flexbox, Grid, and animations that feel natural.",
+    "level": "Intermediate",
+    "category": "Frontend"
+  },
+  {
+    "name": "JavaScript (ES6+)",
+    "icon": "cpu",
+    "description": "Building interactive, dynamic web experiences with clean, modular code.",
+    "level": "Beginner",
+    "category": "Frontend"
+  },
+  {
+    "name": "React.js",
+    "icon": "aperture",
+    "description": "Building scalable UI components and SPAs with hooks and modern React patterns.",
+    "level": "Beginner",
+    "category": "Frontend"
+  },
+  {
+    "name": "Tkinter",
+    "icon": "layout",
+    "description": "Creating desktop GUI applications with intuitive interfaces using Tkinter.",
+    "level": "Intermediate",
+    "category": "Frontend"
+  },
+  {
+    "name": "MySQL (mysql-connector)",
+    "icon": "database",
+    "description": "Connecting to and querying MySQL databases using Python's mysql-connector library.",
+    "level": "Intermediate",
+    "category": "Database"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "database",
+    "description": "Working with PostgreSQL for structured, relational data in production-grade applications.",
+    "level": "Beginner",
+    "category": "Database"
+  },
+  {
+    "name": "MongoDB (PyMongo)",
+    "icon": "database",
+    "description": "Designing flexible, scalable NoSQL databases using Python's PyMongo driver.",
+    "level": "Beginner",
+    "category": "Database"
+  },
+  {
+    "name": "Python",
+    "icon": "terminal",
+    "description": "Writing efficient, readable scripts for automation, data analysis, and backend systems.",
+    "level": "Advanced",
+    "category": "Programming Languages"
+  },
+  {
+    "name": "C/C++",
+    "icon": "cpu",
+    "description": "Designing and implementing efficient algorithms and data structures. Completed DSA in C++.",
+    "level": "Intermediate",
+    "category": "Programming Languages"
+  },
+  {
+    "name": "Java",
+    "icon": "coffee",
+    "description": "Simple projects and console applications using Java.",
+    "level": "Beginner",
+    "category": "Programming Languages"
+  },
+  {
+    "name": "Git & GitHub",
+    "icon": "github",
+    "description": "Managing version control, collaboration, and CI/CD workflows with confidence.",
+    "level": "Beginner",
+    "category": "Tools"
+  }
+]

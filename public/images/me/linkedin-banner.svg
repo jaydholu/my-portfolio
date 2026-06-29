@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#1a1050"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="66" x2="1584" y2="66"/>
+    <line x1="0" y1="132" x2="1584" y2="132"/>
+    <line x1="0" y1="198" x2="1584" y2="198"/>
+    <line x1="0" y1="264" x2="1584" y2="264"/>
+    <line x1="0" y1="330" x2="1584" y2="330"/>
+    <line x1="264" y1="0" x2="264" y2="396"/>
+    <line x1="528" y1="0" x2="528" y2="396"/>
+    <line x1="792" y1="0" x2="792" y2="396"/>
+    <line x1="1056" y1="0" x2="1056" y2="396"/>
+    <line x1="1320" y1="0" x2="1320" y2="396"/>
+  </g>
+
+  <!-- ─── SAFE ZONE: profile pic covers roughly x=0–370, y=160–396 ─── -->
+  <!-- All important content starts at x=400+ -->
+
+  <!-- Left accent bar (safe, top area only) -->
+  <rect x="60" y="40" width="4" height="130" rx="2" fill="url(#accent)" opacity="0.6"/>
+
+  <!-- Decorative faint text top-left (behind profile pic, decorative only) -->
+  <text x="80" y="110" font-family="'Courier New', monospace" font-size="48" fill="#667eea" opacity="0.06" font-weight="700">{ }</text>
+
+  <!-- ─── NAME + PILLS — centered, starts at x=420 safe from profile pic ─── -->
+  <text x="430" y="120" font-family="'Segoe UI', system-ui, sans-serif" font-size="68" font-weight="700" fill="#ffffff" letter-spacing="-1">Jay Dholu</text>
+
+  <!-- Role pills -->
+  <rect x="430" y="138" width="178" height="32" rx="16" fill="url(#accent)" opacity="0.95"/>
+  <text x="519" y="159" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="1">ML / DL ENGINEER</text>
+
+  <rect x="620" y="138" width="196" height="32" rx="16" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.85"/>
+  <text x="718" y="159" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#a5b4fc" text-anchor="middle" letter-spacing="1">WEB DEVELOPER</text>
+
+  <rect x="828" y="138" width="116" height="32" rx="16" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.85"/>
+  <text x="886" y="159" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#c4b5fd" text-anchor="middle" letter-spacing="1">PYTHON</text>
+
+  <!-- Divider -->
+  <line x1="430" y1="188" x2="960" y2="188" stroke="#667eea" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- ─── CODE BLOCK — right half, fully visible ─── -->
+  <!-- Code block background pill -->
+  <rect x="430" y="202" width="460" height="158" rx="10" fill="#0d0a2e" fill-opacity="0.7" stroke="#667eea" stroke-width="0.75" stroke-opacity="0.3"/>
+
+  <!-- Line numbers -->
+  <text x="450" y="226" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">1</text>
+  <text x="450" y="248" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">2</text>
+  <text x="450" y="270" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">3</text>
+  <text x="450" y="292" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">4</text>
+  <text x="450" y="314" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">5</text>
+  <text x="450" y="336" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">6</text>
+
+  <!-- Code lines -->
+  <text x="472" y="226" font-family="'Courier New', monospace" font-size="13" fill="#667eea">import</text>
+  <text x="524" y="226" font-family="'Courier New', monospace" font-size="13" fill="#a5b4fc">numpy</text>
+  <text x="578" y="226" font-family="'Courier New', monospace" font-size="13" fill="#667eea">as</text>
+  <text x="598" y="226" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">np</text>
+
+  <text x="472" y="248" font-family="'Courier New', monospace" font-size="13" fill="#667eea">from</text>
+  <text x="508" y="248" font-family="'Courier New', monospace" font-size="13" fill="#a5b4fc">sklearn</text>
+  <text x="563" y="248" font-family="'Courier New', monospace" font-size="13" fill="#667eea">import</text>
+  <text x="615" y="248" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">MLPClassifier</text>
+
+  <text x="472" y="270" font-family="'Courier New', monospace" font-size="13" fill="#c4b5fd">def</text>
+  <text x="500" y="270" font-family="'Courier New', monospace" font-size="13" fill="#f0abfc">predict</text>
+  <text x="554" y="270" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">(self, X):</text>
+
+  <text x="472" y="292" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">    """</text>
+  <text x="508" y="292" font-family="'Courier New', monospace" font-size="13" fill="#64748b">Run ML inference</text>
+  <text x="660" y="292" font-family="'Courier New', monospace" font-size="13" fill="#94a3b8">"""</text>
+
+  <text x="472" y="314" font-family="'Courier New', monospace" font-size="13" fill="#667eea">    return</text>
+  <text x="532" y="314" font-family="'Courier New', monospace" font-size="13" fill="#e2e8f0">self.model.predict(X)</text>
+
+  <text x="472" y="336" font-family="'Courier New', monospace" font-size="13" fill="#10b981">    # accuracy: 0.97 ✓</text>
+
+  <!-- ─── NEURAL NET — far right ─── -->
+  <!-- Layer 1 -->
+  <circle cx="1060" cy="110" r="9" fill="none" stroke="#667eea" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="1060" cy="160" r="9" fill="none" stroke="#667eea" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="1060" cy="210" r="9" fill="none" stroke="#667eea" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="1060" cy="260" r="9" fill="none" stroke="#667eea" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="1060" cy="310" r="9" fill="none" stroke="#667eea" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Layer 2 -->
+  <circle cx="1160" cy="130" r="9" fill="none" stroke="#764ba2" stroke-width="1.5" stroke-opacity="0.65"/>
+  <circle cx="1160" cy="190" r="9" fill="none" stroke="#764ba2" stroke-width="1.5" stroke-opacity="0.65"/>
+  <circle cx="1160" cy="250" r="9" fill="none" stroke="#764ba2" stroke-width="1.5" stroke-opacity="0.65"/>
+  <circle cx="1160" cy="310" r="9" fill="none" stroke="#764ba2" stroke-width="1.5" stroke-opacity="0.65"/>
+
+  <!-- Layer 3 -->
+  <circle cx="1260" cy="150" r="9" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.7"/>
+  <circle cx="1260" cy="210" r="9" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.7"/>
+  <circle cx="1260" cy="270" r="9" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.7"/>
+
+  <!-- Output -->
+  <circle cx="1360" cy="180" r="12" fill="url(#accent)" fill-opacity="0.65"/>
+  <circle cx="1360" cy="250" r="12" fill="url(#accent)" fill-opacity="0.65"/>
+
+  <!-- Connections 1→2 -->
+  <g stroke="#667eea" stroke-width="0.5" stroke-opacity="0.18">
+    <line x1="1069" y1="110" x2="1151" y2="130"/>
+    <line x1="1069" y1="110" x2="1151" y2="190"/>
+    <line x1="1069" y1="160" x2="1151" y2="130"/>
+    <line x1="1069" y1="160" x2="1151" y2="190"/>
+    <line x1="1069" y1="160" x2="1151" y2="250"/>
+    <line x1="1069" y1="210" x2="1151" y2="130"/>
+    <line x1="1069" y1="210" x2="1151" y2="190"/>
+    <line x1="1069" y1="210" x2="1151" y2="250"/>
+    <line x1="1069" y1="210" x2="1151" y2="310"/>
+    <line x1="1069" y1="260" x2="1151" y2="190"/>
+    <line x1="1069" y1="260" x2="1151" y2="250"/>
+    <line x1="1069" y1="260" x2="1151" y2="310"/>
+    <line x1="1069" y1="310" x2="1151" y2="250"/>
+    <line x1="1069" y1="310" x2="1151" y2="310"/>
+  </g>
+
+  <!-- Connections 2→3 -->
+  <g stroke="#764ba2" stroke-width="0.5" stroke-opacity="0.22">
+    <line x1="1169" y1="130" x2="1251" y2="150"/>
+    <line x1="1169" y1="130" x2="1251" y2="210"/>
+    <line x1="1169" y1="190" x2="1251" y2="150"/>
+    <line x1="1169" y1="190" x2="1251" y2="210"/>
+    <line x1="1169" y1="190" x2="1251" y2="270"/>
+    <line x1="1169" y1="250" x2="1251" y2="210"/>
+    <line x1="1169" y1="250" x2="1251" y2="270"/>
+    <line x1="1169" y1="310" x2="1251" y2="210"/>
+    <line x1="1169" y1="310" x2="1251" y2="270"/>
+  </g>
+
+  <!-- Connections 3→output -->
+  <g stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.35">
+    <line x1="1269" y1="150" x2="1348" y2="180"/>
+    <line x1="1269" y1="210" x2="1348" y2="180"/>
+    <line x1="1269" y1="210" x2="1348" y2="250"/>
+    <line x1="1269" y1="270" x2="1348" y2="250"/>
+  </g>
+
+  <!-- Floating terms — top area and far right only (safe zones) -->
+  <text x="980" y="60" font-family="'Courier New', monospace" font-size="11" fill="#667eea" opacity="0.3" transform="rotate(-8, 980, 60)">gradient_descent()</text>
+  <text x="1400" y="80" font-family="'Courier New', monospace" font-size="11" fill="#a5b4fc" opacity="0.32" transform="rotate(6, 1400, 80)">loss = 0.0042</text>
+  <text x="1420" y="340" font-family="'Courier New', monospace" font-size="11" fill="#c4b5fd" opacity="0.3" transform="rotate(-5, 1420, 340)">Flask · FastAPI</text>
+  <text x="1460" y="200" font-family="'Courier New', monospace" font-size="11" fill="#764ba2" opacity="0.35" transform="rotate(12, 1460, 200)">Neural Network</text>
+  <text x="430" y="60" font-family="'Courier New', monospace" font-size="11" fill="#a5b4fc" opacity="0.22" transform="rotate(-5, 430, 60)">pandas · sklearn · numpy</text>
+
+  <!-- Bottom tagline — centered in safe zone -->
+  <text x="900" y="378" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#a5b4fc" opacity="0.45" text-anchor="middle" letter-spacing="4">TURNING DATA INTO DECISIONS</text>
+</svg>
